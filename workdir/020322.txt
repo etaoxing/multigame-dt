@@ -1,0 +1,225 @@
+/home/exing/miniconda3/envs/mgdt/lib/python3.10/site-packages/tensorflow/python/framework/dtypes.py:246: DeprecationWarning: `np.bool8` is a deprecated alias fo$
+ `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+A.L.E: Arcade Learning Environment (version 0.7.5+db37282)
+[Powered by Stella]
+num_envs: 8 <SequenceEnvironmentWrapper<AtariPreprocessing<TimeLimit<OrderEnforcing<StepAPICompatibility<PassiveEnvChecker<AtariEnv<ALE/Breakout-v5>>>>>>>>
+MultiGameDecisionTransformer(
+  (transformer): Transformer(
+    (layers): ModuleList(
+      (0): Block(
+        (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (attn): CausalSelfAttention(
+          (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+          (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        )
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+          (act): GELU(approximate=tanh)
+          (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        )
+        (dropout_2): Dropout(p=0.1, inplace=False)
+      )
+      (1): Block(
+        (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (attn): CausalSelfAttention(
+          (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+          (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        )
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+          (act): GELU(approximate=tanh)
+          (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        )
+        (dropout_2): Dropout(p=0.1, inplace=False)
+      )
+      (2): Block(
+        (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (attn): CausalSelfAttention(
+          (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+          (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        )
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+          (act): GELU(approximate=tanh)
+          (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        )
+        (dropout_2): Dropout(p=0.1, inplace=False)
+      )
+      (3): Block(
+        (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (attn): CausalSelfAttention(
+          (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+          (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        )
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+          (act): GELU(approximate=tanh)
+          (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        )
+        (dropout_2): Dropout(p=0.1, inplace=False)
+      )
+      (5): Block(
+        (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (attn): CausalSelfAttention(
+          (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+          (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        )
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+          (act): GELU(approximate=tanh)
+          (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        )
+        (dropout_2): Dropout(p=0.1, inplace=False)
+      )
+      (6): Block(
+        (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (attn): CausalSelfAttention(
+          (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+          (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        )
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+          (act): GELU(approximate=tanh)
+          (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        )
+        (dropout_2): Dropout(p=0.1, inplace=False)
+      )
+      (7): Block(
+        (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (attn): CausalSelfAttention(
+          (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+          (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        )
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+          (act): GELU(approximate=tanh)
+          (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        )
+        (dropout_2): Dropout(p=0.1, inplace=False)
+      )
+      (8): Block(
+        (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (attn): CausalSelfAttention(
+          (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+          (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        )
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+          (act): GELU(approximate=tanh)
+          (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        )
+        (dropout_2): Dropout(p=0.1, inplace=False)
+      )
+      (9): Block(
+        (ln_1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (attn): CausalSelfAttention(
+          (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+          (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        )
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (ln_2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+          (act): GELU(approximate=tanh)
+          (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        )
+        (dropout_2): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (norm_f): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+  )
+  (image_emb): Conv2d(1, 1280, kernel_size=(14, 14), stride=(14, 14), padding=valid)
+  (ret_emb): Embedding(120, 1280)
+  (act_emb): Embedding(18, 1280)
+  (rew_emb): Embedding(4, 1280)
+  (ret_linear): Linear(in_features=1280, out_features=120, bias=True)
+  (act_linear): Linear(in_features=1280, out_features=18, bias=True)
+  (rew_linear): Linear(in_features=1280, out_features=4, bias=True)
+)
+seeds: [625644691, 3310491232, 3030156252, 3143739853, 3436061708, 2288794160, 1958272647, 4067669068, 1440320622, 766483143, 1490372778, 2690030966, 905525119,
+4106420999, 2385423402, 3513361400]
+/home/exing/miniconda3/envs/mgdt/lib/python3.10/site-packages/gym/utils/passive_env_checker.py:233: DeprecationWarning: `np.bool8` is a deprecated alias for `np.
+bool_`.  (Deprecated NumPy 1.24)
+  if not isinstance(done, (bool, np.bool8)):
+step: 0, fps: 0.00, done: [0 0 0 0 0 0 0 0], rew_sum: [0. 0. 0. 0. 0. 0. 0. 0.]
+step: 100, fps: 87.52, done: [0 0 0 0 0 0 0 0], rew_sum: [2. 2. 1. 2. 2. 2. 2. 3.]
+step: 200, fps: 96.46, done: [0 0 0 0 0 0 0 0], rew_sum: [6. 6. 5. 6. 5. 5. 6. 7.]
+step: 300, fps: 99.80, done: [0 0 0 0 0 0 0 0], rew_sum: [12.  9.  8.  9.  8.  8.  9.  9.]
+step: 400, fps: 101.41, done: [0 0 0 0 0 0 0 0], rew_sum: [14. 11. 10. 11. 10. 10. 10. 11.]
+step: 500, fps: 102.31, done: [0 0 0 0 0 0 0 0], rew_sum: [17. 15. 13. 18. 17. 15. 14. 20.]
+step: 600, fps: 102.83, done: [0 0 0 0 0 0 0 0], rew_sum: [27. 22. 17. 22. 24. 22. 17. 29.]
+step: 700, fps: 103.17, done: [0 0 0 0 0 0 0 0], rew_sum: [31. 26. 24. 25. 31. 31. 22. 42.]
+step: 800, fps: 103.38, done: [0 0 0 0 0 0 0 0], rew_sum: [36. 36. 31. 28. 35. 52. 27. 60.]
+step: 900, fps: 103.53, done: [0 0 0 0 0 0 0 0], rew_sum: [45. 43. 41. 34. 48. 59. 33. 85.]
+step: 1000, fps: 103.62, done: [0 0 0 0 0 0 0 0], rew_sum: [ 70.  57.  45.  39.  63.  64.  36. 114.]
+step: 1100, fps: 103.67, done: [0 0 0 0 0 0 0 0], rew_sum: [ 91.  75.  62.  49.  79.  93.  40. 144.]
+step: 1200, fps: 103.71, done: [0 0 0 0 0 0 0 0], rew_sum: [115. 102.  64.  51.  81. 101.  42. 156.]
+step: 1300, fps: 103.73, done: [0 0 0 0 0 0 0 0], rew_sum: [136. 131.  81.  56.  86. 103.  44. 282.]
+step: 1400, fps: 103.74, done: [0 0 0 0 0 0 0 0], rew_sum: [224. 131.  86.  83. 112. 184.  64. 311.]
+step: 1500, fps: 103.75, done: [0 0 0 0 0 0 0 0], rew_sum: [235. 147.  90. 141. 131. 265.  80. 313.]
+step: 1600, fps: 103.77, done: [0 0 0 0 1 0 0 0], rew_sum: [241. 177. 103. 257. 146. 316. 109. 319.]
+step: 1700, fps: 103.81, done: [0 0 0 0 1 0 0 1], rew_sum: [242. 247. 130. 347. 146. 336. 200. 328.]
+step: 1800, fps: 103.89, done: [0 0 0 0 1 1 0 1], rew_sum: [323. 260. 155. 371. 146. 354. 260. 328.]
+step: 1900, fps: 103.99, done: [1 0 0 0 1 1 1 1], rew_sum: [337. 282. 236. 387. 146. 354. 271. 328.]
+step: 2000, fps: 104.15, done: [1 0 0 1 1 1 1 1], rew_sum: [337. 310. 313. 391. 146. 354. 271. 328.]
+step: 2100, fps: 104.31, done: [1 0 1 1 1 1 1 1], rew_sum: [337. 349. 313. 391. 146. 354. 271. 328.]
+step: 2200, fps: 104.46, done: [1 0 1 1 1 1 1 1], rew_sum: [337. 381. 313. 391. 146. 354. 271. 328.]
+step: 2300, fps: 104.60, done: [1 0 1 1 1 1 1 1], rew_sum: [337. 394. 313. 391. 146. 354. 271. 328.]
+step: 0, fps: 0.00, done: [0 0 0 0 0 0 0 0], rew_sum: [0. 0. 0. 0. 0. 0. 0. 0.]
+step: 100, fps: 101.97, done: [0 0 0 0 0 0 0 0], rew_sum: [2. 2. 2. 2. 2. 2. 2. 2.]
+step: 200, fps: 102.42, done: [0 0 0 0 0 0 0 0], rew_sum: [6. 5. 6. 5. 5. 6. 3. 6.]
+step: 300, fps: 102.57, done: [0 0 0 0 0 0 0 0], rew_sum: [12.  8. 12.  8.  8.  9.  5.  8.]
+step: 400, fps: 102.67, done: [0 0 0 0 0 0 0 0], rew_sum: [14. 13. 13. 17. 10. 11.  8. 11.]
+step: 500, fps: 102.71, done: [0 0 0 0 0 0 0 0], rew_sum: [17. 20. 20. 31. 17. 14. 10. 17.]
+step: 600, fps: 102.76, done: [0 0 0 0 0 0 0 0], rew_sum: [22. 25. 29. 38. 24. 18. 14. 20.]
+step: 700, fps: 102.79, done: [0 0 0 0 0 0 0 0], rew_sum: [26. 36. 32. 41. 37. 22. 16. 22.]
+step: 800, fps: 102.81, done: [0 0 0 0 0 0 0 0], rew_sum: [43. 51. 49. 51. 44. 24. 19. 28.]
+step: 900, fps: 102.84, done: [0 0 0 0 0 0 0 0], rew_sum: [64. 65. 55. 53. 54. 34. 29. 35.]
+step: 1000, fps: 102.85, done: [0 0 0 0 0 0 0 0], rew_sum: [82. 74. 57. 61. 56. 39. 36. 37.]
+step: 1100, fps: 102.86, done: [0 0 0 0 0 0 0 0], rew_sum: [143.  79.  61.  85.  66.  51.  54.  43.]
+step: 1200, fps: 102.87, done: [0 0 0 0 0 0 0 0], rew_sum: [266.  91.  63. 173.  91.  64.  56.  54.]
+step: 1300, fps: 102.88, done: [0 0 0 0 0 0 0 0], rew_sum: [309. 207.  87. 173. 120.  76.  68.  59.]
+step: 1400, fps: 102.93, done: [0 0 0 1 0 0 1 0], rew_sum: [309. 267. 117. 173. 134.  85.  75.  61.]
+step: 1500, fps: 103.01, done: [0 0 0 1 0 0 1 0], rew_sum: [309. 341. 138. 173. 134. 112.  75.  70.]
+step: 1600, fps: 103.09, done: [0 0 0 1 0 0 1 0], rew_sum: [347. 349. 237. 173. 134. 122.  75.  87.]
+step: 1700, fps: 103.18, done: [1 1 1 1 0 0 1 0], rew_sum: [367. 351. 280. 173. 134. 122.  75. 111.]
+step: 1800, fps: 103.34, done: [1 1 1 1 0 0 1 0], rew_sum: [367. 351. 280. 173. 134. 122.  75. 145.]
+step: 1900, fps: 103.49, done: [1 1 1 1 0 0 1 0], rew_sum: [367. 351. 280. 173. 134. 122.  75. 172.]
+step: 2000, fps: 103.61, done: [1 1 1 1 0 0 1 0], rew_sum: [367. 351. 280. 173. 141. 122.  75. 242.]
+step: 2100, fps: 103.73, done: [1 1 1 1 0 0 1 0], rew_sum: [367. 351. 280. 173. 141. 122.  75. 309.]
+step: 2200, fps: 103.84, done: [1 1 1 1 0 0 1 0], rew_sum: [367. 351. 280. 173. 141. 122.  75. 324.]
+step: 2300, fps: 103.96, done: [1 1 1 1 0 0 1 1], rew_sum: [367. 351. 280. 173. 141. 126.  75. 324.]
+step: 2400, fps: 104.07, done: [1 1 1 1 0 0 1 1], rew_sum: [367. 351. 280. 173. 166. 145.  75. 324.]
+step: 2500, fps: 104.18, done: [1 1 1 1 0 0 1 1], rew_sum: [367. 351. 280. 173. 254. 178.  75. 324.]
+step: 2600, fps: 104.28, done: [1 1 1 1 0 0 1 1], rew_sum: [367. 351. 280. 173. 315. 199.  75. 324.]
+step: 2700, fps: 104.38, done: [1 1 1 1 0 0 1 1], rew_sum: [367. 351. 280. 173. 351. 229.  75. 324.]
+step: 2800, fps: 104.47, done: [1 1 1 1 0 0 1 1], rew_sum: [367. 351. 280. 173. 353. 250.  75. 324.]
+step: 2900, fps: 104.58, done: [1 1 1 1 1 0 1 1], rew_sum: [367. 351. 280. 173. 353. 313.  75. 324.]
+rew_sum
+mean: 298.81
+std: 88.63
+median: 326.00
+iqm: 325.75
+----------
+normalized_scores
+mean: 10.32
+std: 3.08
+median: 11.26
+iqm: 11.25
