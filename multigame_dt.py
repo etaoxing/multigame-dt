@@ -200,6 +200,8 @@ class Transformer(nn.Module):
 class MultiGameDecisionTransformer(nn.Module):
     def __init__(
         self,
+        img_size: Tuple[int],
+        patch_size: Tuple[int],
         num_actions: int,
         num_rewards: int,
         return_range: Tuple[int],
@@ -216,6 +218,8 @@ class MultiGameDecisionTransformer(nn.Module):
         if d_model % 64 != 0:
             raise ValueError(f"Model size {d_model} must be divisible by 64")
 
+        self.img_size = img_size
+        self.patch_size = patch_size
         self.num_actions = num_actions
         self.num_rewards = num_rewards
         self.num_returns = return_range[1] - return_range[0]
@@ -233,10 +237,8 @@ class MultiGameDecisionTransformer(nn.Module):
             dropout_rate=dropout_rate,
         )
 
-        img_size = (84, 84)
-        patch_size = (14, 14)
-        patch_height, patch_width = patch_size[0], patch_size[1]
-        # If patch_size is (14, 14) for example, P = 84 / 14 = 6
+        patch_height, patch_width = self.patch_size[0], self.patch_size[1]
+        # If img_size=(84, 84), patch_size=(14, 14), then P = 84 / 14 = 6.
         self.image_emb = nn.Conv2d(
             in_channels=1,
             out_channels=self.d_model,
@@ -244,7 +246,7 @@ class MultiGameDecisionTransformer(nn.Module):
             stride=(patch_height, patch_width),
             padding="valid",
         )  # image_emb is now [BT x D x P x P].
-        patch_grid = (img_size[0] // patch_size[0], img_size[1] // patch_size[1])
+        patch_grid = (self.img_size[0] // self.patch_size[0], self.img_size[1] // self.patch_size[1])
         num_patches = patch_grid[0] * patch_grid[1]
         self.image_pos_enc = nn.Parameter(torch.randn(1, 1, num_patches, self.d_model))
 

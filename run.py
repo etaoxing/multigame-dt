@@ -186,16 +186,19 @@ print(f"num_envs: {num_envs}", envs[0])
 # --- Create model
 from multigame_dt import MultiGameDecisionTransformer
 
-ATARI_OBSERVATION_SHAPE = (1, 84, 84)
-ATARI_NUM_ACTIONS = 18  # Maximum number of actions in the full dataset.
+OBSERVATION_SHAPE = (84, 84)
+PATCH_SHAPE = (14, 14)
+NUM_ACTIONS = 18  # Maximum number of actions in the full dataset.
 # rew=0: no reward, rew=1: score a point, rew=2: end game rew=3: lose a point
-ATARI_NUM_REWARDS = 4
-ATARI_RETURN_RANGE = [-20, 100]  # A reasonable range of returns identified in the dataset
+NUM_REWARDS = 4
+RETURN_RANGE = [-20, 100]  # A reasonable range of returns identified in the dataset
 
 model = MultiGameDecisionTransformer(
-    num_actions=ATARI_NUM_ACTIONS,
-    num_rewards=ATARI_NUM_REWARDS,
-    return_range=ATARI_RETURN_RANGE,
+    img_size=OBSERVATION_SHAPE,
+    patch_size=PATCH_SHAPE,
+    num_actions=NUM_ACTIONS,
+    num_rewards=NUM_REWARDS,
+    return_range=RETURN_RANGE,
     d_model=1280,
     num_layers=10,
     dropout_rate=0.1,
@@ -271,7 +274,7 @@ def _batch_rollout(envs, policy_fn, num_episodes, log_interval=None):
 model.eval()
 optimal_action_fn = functools.partial(
     model.optimal_action,
-    return_range=ATARI_RETURN_RANGE,
+    return_range=RETURN_RANGE,
     single_return_token=True,
     opt_weight=0,
     num_samples=128,
@@ -298,6 +301,8 @@ print_metrics(task_results["rew_sum"])
 
 print("-" * 10)
 
-task_results["normalized_scores"] = [get_human_normalized_score(env_name.lower(), score) for score in task_results["rew_sum"]]
-print("normalized_scores")
-print_metrics(task_results["normalized_scores"])
+task_results["human_normalized_score"] = [
+    get_human_normalized_score(env_name.lower(), score) for score in task_results["rew_sum"]
+]
+print("human_normalized_score")
+print_metrics(task_results["human_normalized_score"])
