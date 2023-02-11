@@ -7,7 +7,7 @@ conda activate mgdt
 pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 -f https://download.pytorch.org/whl/torch_stable.html
 pip install -r requirements.txt
 
-python download_weights.py
+python scripts/download_weights.py
 python run.py
 ```
 
@@ -16,7 +16,7 @@ python run.py
 > [logs](workdir/)
 
 | model | params | task     | this repo | orig. |
-| ----- | ------ | -------- | --------  | ----- |
+| ----- | ------ | -------- | --------- | ----- |
 | mgdt  | 200M   | Breakout | 298.8     | 290.6 |
 
 ## References:
